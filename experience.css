@@ -4,6 +4,7 @@
 
 .project-container {
 	display: flex;
+	flex-flow: column;
 }
 
 .project-container .content {
