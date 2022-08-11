@@ -1,0 +1,11 @@
+* {
+	border: red solid 1px;
+}
+
+.project-container {
+	display: flex;
+}
+
+.project-container .content {
+	display: flex;
+}
