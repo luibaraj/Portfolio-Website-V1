@@ -1,0 +1,30 @@
+/* BASE */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* LAYOUT - Each one is its own row */
+nav,
+#Intro,
+#Proj,
+#Skills,
+#Contact {
+	border: red solid 1px;
+	display: flex;
+}
+
+/* NAV - styling */
+nav {
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 1.7rem;
+	padding-bottom: 1.7rem;
+}
+
+nav #links a {
+	text-decoration: none;
+	padding: 6.5rem;
+	font-size: 2rem;
+}
