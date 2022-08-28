@@ -1,3 +1,8 @@
+/* * {
+	border: red solid 1px;
+} */
+
+
 /* BASE */
 * {
 	box-sizing: border-box;
@@ -16,10 +21,7 @@ nav,
 }
 
 /* headings */
-h1,
-h2 {
-	color: #68a8f2;
-}
+
 
 /* NAV - styling */
 nav {
@@ -39,16 +41,16 @@ nav #links a {
 
 
 
-/* ROW - v1 */
-#Intro,
-#Skills {
+/* ROW - v1 color */
+#Intro {
 	background-color: #00234A;
 	color: white;
 }
 
-/* ROW - v2 */
-#Proj,
-#Contact {
+/* ROW - v2 color */
+
+#Contact,
+#Proj {
 	background-color: #394551;
 	color: white;
 }
@@ -58,5 +60,168 @@ nav #links a {
 
 #Intro {
     padding-top: 6rem;
-    padding-bottom: 6rem;
+	
+}
+
+#Intro  .content{
+	display: flex;
+    position: relative;
+    left: 8rem;
+}
+
+.white {
+	color: white;
+}
+
+#Intro .content .title h1 {
+    font-size: 5rem;
+}
+
+#Intro .content .title h2 {
+    font-size: 3rem;
+}
+
+#Intro .content .about-me {
+    position: relative;
+    left: 15rem;
+    bottom: 3rem;
+
+}
+
+#Intro .content .about-me .title,
+#Intro .content .about-me p {
+	text-align: center;
+}
+
+#Intro .content .about-me p{
+	font-size: 1.5rem;
+}
+
+#Intro .content .about-me .title {
+	font-size: 2.5rem;
+}
+
+#Intro .content .title h2 {
+	color: #68a8f2;
+}
+/* PROJ - styling */
+#Proj {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    flex-direction: column;
+    align-items: center;
+	
+}
+
+#Proj h2 {
+	font-size: 3rem;
+}
+
+#Proj .Proj-container .Project {
+    display: flex;
+    background-color: white;
+    color: black;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+	box-shadow: .625rem .5rem .5rem #0077ff;
+	padding: 1rem;
+
+}
+
+#Proj .Proj-container .Project .text .p1{
+	font-size: 2.2rem;
+}
+
+#Proj .Proj-container .Project .text .p1 span,
+#Proj .Proj-container .Project .text .p2 span,
+#Proj .Proj-container .Project .text .p3 span {
+	font-size: 1.6rem;
+	color: #0077ff;
+}
+
+#Proj .Proj-container .Project .text p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+}
+
+#Proj .Proj-container .Project .text .p3 a{
+	text-decoration: none;
+	color: #68a8f2;
+	background-color: #00234A;
+	border: #00234A solid .1rem;
+	padding: .7rem;
+	border-radius: .7rem;
+	box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+}
+
+#Proj .Proj-container .Project .Proj-img {
+	margin-left: 1rem;
+	width: auto;
+	height: 20rem;
+}
+
+#Proj .Proj-container .Project .Proj-img img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/* SKILLS - styling */
+
+#Skills {
+	align-items: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+	flex-direction: column;
+}
+
+#Skills h2 {
+	font-size: 3rem;
+}
+
+#Skills .Card-container {
+	margin-top: 1.5rem;
+	margin-top: 1.5rem;
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+
+#Skills .Card-container .Card {
+    box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#Skills .Card-container .Card .Skills-img img {
+	max-width: 100%;
+	max-height: 100%;
+}
+#Skills .Card-container .Card .Skills-img {
+    width: 15rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#Skills .Card-container .Card .Skills-text p {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-top: .5rem;
+}
+
+/* CONTACT - styling */
+#Contact {
+	padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+	flex-direction: column;
+	align-items: center;
+}
+
+#Contact h2 {
+	font-size: 2rem;
+}
+
+#Contact p {
+	font-size: 1.3rem;
 }
