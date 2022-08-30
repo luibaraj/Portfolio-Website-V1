@@ -29,6 +29,7 @@ nav {
 	justify-content: flex-end;
 	padding-top: 1.7rem;
 	padding-bottom: 1.7rem;
+	transition: .5s;
 }
 
 nav #links a {
@@ -37,8 +38,46 @@ nav #links a {
 	font-size: 1.5rem;
 	font-family: monospace;
 	color: black;
+	transition: .5s;
 }
 
+#toggle {
+	position: relative;
+	display: block;
+	width: 4rem;
+	height: 2rem;
+	border-radius: 2rem;
+	background: rgb(101, 101, 101);
+	transition: .5s;
+	cursor: pointer;
+}
+
+#toggle .indicator {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2rem;
+	height: 2rem;
+	background: linear-gradient(to bottom, #444, #222);
+	border-radius: 50%;
+	transition: .5s;
+	transform: scale(.9);
+
+}
+
+/* DARK mode */
+#toggle.active .indicator {
+	left: 2rem;
+	background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+}
+
+nav.active {
+	background-color: black;
+}
+
+nav #links.active a {
+	color: white;
+}
 
 
 /* ROW - v1 color */
@@ -60,6 +99,7 @@ nav #links a {
 
 #Intro {
     padding-top: 6rem;
+	transition: .5s;
 	
 }
 
@@ -104,12 +144,20 @@ nav #links a {
 #Intro .content .title h2 {
 	color: #68a8f2;
 }
+
+/* DARK MODE - intro */
+
+#Intro.active {
+	background-color: #00162e;
+}
+
 /* PROJ - styling */
 #Proj {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     flex-direction: column;
     align-items: center;
+	transition: .5s;
 	
 }
 
@@ -126,7 +174,7 @@ nav #links a {
 	/* box-shadow: .6rem .5rem .5rem #959494; */
 	box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
 	padding: 1rem;
-
+	transition: .5s;
 }
 
 #Proj .Proj-container .Project .text .p1{
@@ -166,6 +214,17 @@ nav #links a {
 	max-height: 100%;
 }
 
+/* DARK mode for Proj */
+#Proj .Proj-container.active .Project {
+	color: white;
+	background-color: black;
+	box-shadow: 0 4px 8px 0 rgb(124, 124, 124), 0 6px 20px 0 rgb(124, 124, 124);
+}
+
+#Proj.active {
+	background-color: #13161a;
+}
+
 /* SKILLS - styling */
 
 #Skills {
@@ -173,10 +232,12 @@ nav #links a {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
 	flex-direction: column;
+	transition: .5s;
 }
 
 #Skills h2 {
 	font-size: 3rem;
+	transition: .5s;
 }
 
 #Skills .Card-container {
@@ -192,6 +253,7 @@ nav #links a {
     margin-right: 2rem;
     padding: 1rem;
     margin-bottom: 1.5rem;
+	transition: .5s;
 }
 
 #Skills .Card-container .Card .Skills-img img {
@@ -209,6 +271,25 @@ nav #links a {
     text-align: center;
     font-size: 2.2rem;
     margin-top: .5rem;
+	transition: .5s;
+}
+
+/* DARK MODE - skills */
+
+#Skills.active {
+	background-color: #1e2c3e;
+}
+
+#Skills.active h2 {
+	color: white;
+}
+
+#Skills.active .Card-container .Card {
+	background-color: #394551;
+}
+
+#Skills.active .Card-container .Card .Skills-text p {
+	color: white;
 }
 
 /* CONTACT - styling */
@@ -217,6 +298,7 @@ nav #links a {
     padding-bottom: 1.2rem;
 	flex-direction: column;
 	align-items: center;
+	transition: .5s;
 }
 
 #Contact h2 {
@@ -225,4 +307,9 @@ nav #links a {
 
 #Contact p {
 	font-size: 1.3rem;
+}
+
+/* DARK MODE - contact */
+#Contact.active {
+	background-color: #13161a;
 }

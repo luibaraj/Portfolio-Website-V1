@@ -11,6 +11,9 @@
 	
 	<!-- Navigation -->
 	<nav>
+		<div id="toggle">
+			<i class="indicator"></i>
+		</div>
 		<div id = "links">
 			<a href=#Proj>Projects</a>
 			<a href=#Skills>Skills</a>
@@ -40,7 +43,7 @@
 	<!--Projects -->
 	<div id="Proj">
 		<h2>Portfolio Projects</h2>
-		<div class="Proj-container">
+		<div id="Projects" class="Proj-container">
 			<div class="Project">
 				<div class = "text">
 					<p class="p1">Portfolio Website | role: <span>front-end developer</span></p>
@@ -133,6 +136,29 @@
 		<h2>Contact Info</h2>
 		<p>email: luisbarajas@ucsb.edu</p>
 	</div>
+
+
+	<!-- Script for toggle -->
+	<script>
+		const toggle = document.getElementById('toggle');
+		const nav = document.querySelector('nav');
+		const links = document.getElementById('links');
+		const projects = document.getElementById('Projects');
+		const projectDiv = document.getElementById('Proj');
+		const intro = document.getElementById('Intro');
+		const skills = document.getElementById('Skills');
+		const contact = document.getElementById('Contact');
+		toggle.onclick = function() {
+			toggle.classList.toggle('active');
+			nav.classList.toggle('active');
+			links.classList.toggle('active');
+			projects.classList.toggle('active');
+			projectDiv.classList.toggle('active');
+			intro.classList.toggle('active');
+			skills.classList.toggle('active');
+			contact.classList.toggle('active');
+		}
+	</script>
 
 </body>
 </html>
