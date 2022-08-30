@@ -218,7 +218,7 @@ nav #links.active a {
 #Proj .Proj-container.active .Project {
 	color: white;
 	background-color: black;
-	box-shadow: 0 4px 8px 0 rgb(124, 124, 124), 0 6px 20px 0 rgb(124, 124, 124);
+	box-shadow: 0 4px 8px 0 rgb(0 0 0), 0 6px 20px 0 rgb(118 118 118);
 }
 
 #Proj.active {
@@ -313,3 +313,12 @@ nav #links.active a {
 #Contact.active {
 	background-color: #13161a;
 }
+
+
+
+/* RESPONSIVE DESIGN */
+
+/* Less than 1738px
+@media only screen and (max-width: 1738px) {
+
+} */
