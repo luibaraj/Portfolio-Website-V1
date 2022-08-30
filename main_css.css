@@ -103,45 +103,49 @@ nav #links.active a {
 	
 }
 
-#Intro  .content{
+#Intro  {
 	display: flex;
     position: relative;
-    left: 8rem;
+	justify-content: center;
 }
 
 .white {
 	color: white;
 }
 
-#Intro .content .title h1 {
+#Intro .title {
+	margin-right: 2.5rem;
+}
+
+#Intro  .title h1 {
     font-size: 5rem;
 }
 
-#Intro .content .title h2 {
+#Intro  .title h2 {
     font-size: 3rem;
 }
 
-#Intro .content .about-me {
+#Intro  .about-me {
     position: relative;
-    left: 15rem;
     bottom: 3rem;
+	margin-left: 2.5rem;
 
 }
 
-#Intro .content .about-me .title,
-#Intro .content .about-me p {
+#Intro  .about-me .title,
+#Intro  .about-me p {
 	text-align: center;
 }
 
-#Intro .content .about-me p{
+#Intro  .about-me p{
 	font-size: 1.5rem;
 }
 
-#Intro .content .about-me .title {
+#Intro .about-me .title {
 	font-size: 2.5rem;
 }
 
-#Intro .content .title h2 {
+#Intro .title h2 {
 	color: #68a8f2;
 }
 
@@ -171,7 +175,7 @@ nav #links.active a {
     color: black;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-	/* box-shadow: .6rem .5rem .5rem #959494; */
+	margin: 1.5rem .725rem 1.5rem .725rem;
 	box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
 	padding: 1rem;
 	transition: .5s;
@@ -194,13 +198,13 @@ nav #links.active a {
 }
 
 #Proj .Proj-container .Project .text .p3 a{
-	text-decoration: none;
-	color: #68a8f2;
-	background-color: #00234A;
-	border: #00234A solid .1rem;
+	text-decoration:none;
+	color: #0418ff;
+	/* background-color: #00234A; */
+	/* border: #00234A solid .1rem; */
 	padding: .7rem;
-	border-radius: .7rem;
-	box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+	/* border-radius: .7rem; */
+	/* box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black; */
 }
 
 #Proj .Proj-container .Project .Proj-img {
@@ -223,6 +227,10 @@ nav #links.active a {
 
 #Proj.active {
 	background-color: #13161a;
+}
+
+#Proj .Proj-container.active .Project .text .p3 a {
+	color: #8abffb;
 }
 
 /* SKILLS - styling */
@@ -274,6 +282,11 @@ nav #links.active a {
 	transition: .5s;
 }
 
+#Skills .Card-container.pair,
+#Skills .Card-container.single {
+	display: none;
+}
+
 /* DARK MODE - skills */
 
 #Skills.active {
@@ -318,7 +331,103 @@ nav #links.active a {
 
 /* RESPONSIVE DESIGN */
 
-/* Less than 1738px
-@media only screen and (max-width: 1738px) {
+/* Less than 1459px */
 
-} */
+@media only screen and (max-width: 1459px) {
+	#Intro .title {
+		margin-right: 1rem;
+	}
+
+	#Intro .about-me {
+		margin-left: 1rem;
+	}
+
+}
+
+/* Less than 1406 */
+
+@media only screen and (max-width: 1406px) {
+	#Intro {
+		flex-direction: column;
+		padding-top: 1rem;
+    	padding-bottom: 1rem;
+	}
+
+	#Intro .about-me {
+		bottom: 0;
+		padding-top: 3.5rem;
+	}
+
+	#Intro .title h1,
+	#Intro .title h2 {
+		text-align: center;
+	}
+}
+
+/* Less than 1333px */
+
+@media only screen and (max-width: 1333px) {
+
+	.Proj-img {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+
+	nav #links a {
+		padding: 6.5rem 1.5rem 6.5rem 1.5rem;
+	}
+
+	#Skills .Card-container .Card {
+		margin-left: 1rem;
+		margin-right : 1rem;
+	}
+}
+
+/* Less than 923 */
+
+@media only screen and (max-width: 923px) {
+	#Skills .Card-container {
+		display: none;
+	}
+
+	#Skills .Card-container.pair {
+		display: flex;
+	}
+}
+
+/* Less than 624px */
+
+@media only screen and (max-width: 624px) {
+	#Skills .Card-container.pair {
+		display: none;
+	}
+
+	#Skills .Card-container.single {
+		display: flex;
+	}
+}
+
+/* Less than 530px */
+
+@media only screen and (max-width: 530px) {
+
+	nav {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	nav #links {
+		display: flex;
+		flex-direction: column;
+	}
+
+	nav #links a {
+		padding: .5rem 0 .5rem 0;
+	}
+
+	#Intro .title h2 {
+		font-size: 2.7rem;
+	}
+}
